@@ -15,5 +15,8 @@ module.exports = merge(common,{
     plugins:[
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    externals:{
+        config: JSON.stringify(require('./config/globalConfig.dev.json'))
+    }
 });

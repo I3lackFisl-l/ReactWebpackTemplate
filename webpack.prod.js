@@ -11,5 +11,8 @@ module.exports = merge(common,{
         new HtmlWebpackPlugin({
             template: 'index.html'  // re-create index.html every build
         })
-    ]
+    ],
+    externals:{
+        config: JSON.stringify(require('./config/globalConfig.prod.json'))
+    }
 });
