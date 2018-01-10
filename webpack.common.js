@@ -20,8 +20,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                loaders: ['style-loader', 'css-loader']
+                test: /\.(css|scss)$/,
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(woff|woff2|eot|ttf|svg|ico)$/,

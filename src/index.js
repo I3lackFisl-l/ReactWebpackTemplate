@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import { AppContainer } from 'react-hot-loader'
 import Layout from './Layout'
 
