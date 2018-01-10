@@ -1,0 +1,9 @@
+{
+    "name": "react-templpate",
+    "jest": {
+      "verbose": true
+    },
+    "moduleNameMapper": {
+        "^config$": "<rootDir>/path/to/App/config.js"
+    }
+  }
