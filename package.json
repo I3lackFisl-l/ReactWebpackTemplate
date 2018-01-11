@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "esri-loader": "^2.0.0",
+    "esri-loader-react": "^2.0.3",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^3.1.3",
