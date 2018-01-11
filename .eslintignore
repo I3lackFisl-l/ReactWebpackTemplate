@@ -1,0 +1,9 @@
+/* eslint-disable */
+
+# /node_modules/* and /bower_components/* ignored by default
+
+# Ignore built files except public/index.js
+public/*
+
+# Ignore unit tests
+src/__tests_/*
