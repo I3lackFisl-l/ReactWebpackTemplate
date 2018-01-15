@@ -51,9 +51,7 @@ class CurrentLocation extends Component {
 
     render() {
         return (
-            <div className='button'>
-                <button onClick={this.onClick}>GetCurrent Location</button>
-            </div>
+            <button onClick={this.onClick}>GetCurrent Location</button>
         );
     }
 }

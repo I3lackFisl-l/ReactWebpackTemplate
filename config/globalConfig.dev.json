@@ -1,3 +1,4 @@
 {
-    "baseService": "http://www.google.com"
+    "baseService": "http://www.google.com",
+    "routeService" : "https://staging.nostramap.com/nostraWebService/api/MapNostra/Route/"
 }
