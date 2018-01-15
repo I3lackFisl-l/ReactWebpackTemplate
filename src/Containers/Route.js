@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './css/CurrentLocation.scss'
 
 class Route extends Component {
     constructor(){

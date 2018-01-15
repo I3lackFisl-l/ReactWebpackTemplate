@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './css/CurrentLocation.scss'
 import PropTypes from 'prop-types'
 
 class CurrentLocation extends Component {

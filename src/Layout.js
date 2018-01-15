@@ -3,20 +3,17 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Map from './Map/Map'
 import * as ActionMap from './Actions/Map/ActionMap'
-import CurrentLocation from './Containers/CurrentLocation'
 import PropTypes from 'prop-types'
-import Route from './Containers/Route'
+import Footer from './Containers/Footer'
 
 class Layout extends Component {
     render() {
         const {map, mapActions} = this.props
+        // console.log(mapEvt);
         return (
             <div>
-                <Map mapData={map}/>
-                <div className='button'>
-                    <Route mapActions={mapActions}/>
-                    <CurrentLocation mapActions={mapActions}/>
-                </div>
+                <Map mapData={map} mapActions={mapActions}/>
+                <Footer />
             </div>
         )
     }

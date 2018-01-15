@@ -1,4 +1,4 @@
-import * as actionTypes from '../Constants/ActionTypes'
+import * as actionTypes from '../../Constants/ActionTypes'
 
 const initialState = {mapCenter: null, routeResult :null}
 

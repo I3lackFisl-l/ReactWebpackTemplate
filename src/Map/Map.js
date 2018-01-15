@@ -17,12 +17,14 @@ const lineSymbol = {
 
 class Map extends Component {
     componentDidMount() {
+        const {mapActions} = this.props
         loadModules(['esri/Map',
             'esri/views/SceneView',
             'esri/geometry/Point',
             'esri/layers/GraphicsLayer',
+            'esri/core/watchUtils',
             'dojo/domReady!'], options)
-            .then(([Map, SceneView, Point, GraphicsLayer]) => {
+            .then(([Map, SceneView, Point, GraphicsLayer, watchUtils]) => {
                 // create map with the given options at a DOM node w/ id 'mapNode'
                 const map = new Map({
                     basemap: 'dark-gray'
@@ -49,6 +51,24 @@ class Map extends Component {
                 });
                 
                 this.zoomToPoint(initPnt);
+
+                // // init event extent change
+                watchUtils.whenTrue(view, 'stationary', () =>{
+                    if (view.center && view.extent) {
+                        const params = {
+                            extent: view.extent,
+                            centerX: view.center.x,
+                            centerY: view.center.y
+                        }
+
+                        mapActions.ActionExtentChange(params)
+                    }
+                })
+
+                // init event click map
+                view.on('click', evt=>{
+                    mapActions.ActionClickMap(evt)
+                })
             })
             .catch(err => {
                 // handle any script or module loading errors
@@ -88,6 +108,7 @@ class Map extends Component {
 
     render() {
         const {mapData} = this.props
+        console.log('mapData',mapData)
         if(mapData.mapCenter != null){
             this.zoomToPoint(mapData.mapCenter.lat, mapData.mapCenter.long)
         }
@@ -103,7 +124,8 @@ class Map extends Component {
 }
 
 Map.propTypes = {
-    mapData : PropTypes.object.isRequired
+    mapData : PropTypes.object.isRequired,
+    mapActions : PropTypes.object.isRequired
 }
 
 export default Map;

@@ -2,6 +2,8 @@ import * as actionTypes from '../../Constants/ActionTypes'
 import * as serviceUtils from '../../Utilities/ServiceUtil'
 import config from 'config'
 
+// ---------------- Action Input for map ----------------
+
 export const ActionSetCenterMap = (lat, long) => {
     return {
         type: actionTypes.SET_CENTER,
@@ -38,5 +40,24 @@ export const ActionSaveRouteResult = (res) => {
     return {
         type: actionTypes.ROUTE,
         routeResult : res.Result.TimeResult.results
+    }
+}
+
+
+
+
+
+// ---------------- Action Output for map ----------------
+export const ActionClickMap = (clickParam) => {
+    return {
+        type: actionTypes.MAP_CLICK,
+        params : clickParam
+    }
+}
+
+export const ActionExtentChange = (extentChangeParam) => {
+    return {
+        type: actionTypes.EXTENT_CHANGE,
+        params : extentChangeParam
     }
 }
