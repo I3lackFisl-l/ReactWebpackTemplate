@@ -108,7 +108,6 @@ class Map extends Component {
 
     render() {
         const {mapData} = this.props
-        console.log('mapData',mapData)
         if(mapData.mapCenter != null){
             this.zoomToPoint(mapData.mapCenter.lat, mapData.mapCenter.long)
         }

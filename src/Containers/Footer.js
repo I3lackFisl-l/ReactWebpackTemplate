@@ -10,7 +10,7 @@ import { connect } from 'react-redux'
 class Footer extends Component {
     render() {
         const {mapActions, mapEvt} = this.props
-        console.log(mapEvt)
+        // console.log(mapEvt)
         return (
             <div className='button'>
                 <Route mapActions={mapActions}/>
