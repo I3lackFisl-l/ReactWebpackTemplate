@@ -23,7 +23,8 @@
       "config": "<rootDir>/config/globalConfig.dev.json",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-    }
+    },
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -36,16 +37,19 @@
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.8",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.15.0",
     "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.0.5",
+    "jest-enzyme": "^4.0.2",
     "node-sass": "^4.7.2",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.2.0",
     "redux-logger": "^3.0.6",
+    "redux-test-utils": "^0.2.2",
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
