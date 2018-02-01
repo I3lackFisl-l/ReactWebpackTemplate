@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const { resolve } = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: resolve(__dirname, 'src'),
@@ -36,5 +38,11 @@ module.exports = {
             //     loader : 'file-loader'
             // }
         ]
-    }
+    },
+    plugins:[
+        new CleanWebpackPlugin(['public']),//clean folder public
+        new HtmlWebpackPlugin({
+            template: 'index.html'  // re-create index.html every build
+        })
+    ],
 }
